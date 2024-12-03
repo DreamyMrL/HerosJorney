@@ -1,10 +1,9 @@
 fileFormatVersion: 2
-guid: ba01630e44d2b554ebd59c179794c319
+guid: e8b3c88e1fca5fb4da832411d99ca5c8
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences:
-  - dialoguePrefab: {fileID: 6337780953054220347, guid: 6dc7b90d3e01d1c4595185dd82289980, type: 3}
+  defaultReferences: []
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

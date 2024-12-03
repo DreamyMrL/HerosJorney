@@ -15,7 +15,9 @@ public class Dialogue : ScriptableObject
 public class DialogueLine
 {
     public string speaker;  // e.g., "Player" or "NPC"
+    public string speakerName;  // Name of the speaker displayed above text
     [TextArea(2, 5)] public string text;
     public float displayDuration = 2f;  // Control how long each line is displayed
     public bool requiresPlayerInput = false;  // True if player input is needed after this line
 }
+
