@@ -60,8 +60,15 @@ public class Overworld : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other) //anything that enters this trigger causes this to run
     {
-        if(other.gameObject.tag == "Enemy")
+        if(other.gameObject.tag == "Slime")
         {
+            BattleSystem.slime = true;
+            PlayerPosition = player.transform.position;
+            EnemyTrigger.Invoke();
+        }
+        if (other.gameObject.tag == "Plant")
+        {
+            BattleSystem.plant = true;
             PlayerPosition = player.transform.position;
             EnemyTrigger.Invoke();
         }

@@ -26,7 +26,11 @@ public class BattleSystem : MonoBehaviour
     public GameObject playerPrefab2;
     public GameObject playerPrefab3;
     public GameObject playerPrefab4;
-    public GameObject enemyPrefab;
+    public GameObject enemyPrefab1;
+    public GameObject enemyPrefab2;
+
+    public static bool slime = false;
+    public static bool plant = false;
 
     public Transform playerposition;
     public Transform playerposition2;
@@ -69,8 +73,17 @@ public class BattleSystem : MonoBehaviour
         playerUnit3 = Player3GO.GetComponent<Unit>();
         GameObject Player4GO = Instantiate(playerPrefab4, playerposition4);
         playerUnit4 = Player4GO.GetComponent<Unit>();
-        GameObject EnemyGO = Instantiate(enemyPrefab, enemyposition);
-        enemyUnit = EnemyGO.GetComponent<Unit>();
+
+        if(slime)
+        {
+            GameObject EnemyGO = Instantiate(enemyPrefab1, enemyposition);
+            enemyUnit = EnemyGO.GetComponent<Unit>();
+        }
+        if (plant)
+        {
+            GameObject EnemyGO = Instantiate(enemyPrefab2, enemyposition);
+            enemyUnit = EnemyGO.GetComponent<Unit>();
+        }
 
         dialogueText.text = "A " + enemyUnit.unitName + " encounters Pandora's squad!";
 
@@ -161,13 +174,13 @@ public class BattleSystem : MonoBehaviour
     IEnumerator PlayerAttack4()
     {
         bool IsDead = false;
-        if (ice = true)
+        if (ice)
         {
             enemyUnit.TakeDamage(playerUnit4.damage);
             enemyHUD.SetHP(enemyUnit.currentHP);
             dialogueText.text = playerUnit4.unitName + " attacks for " + playerUnit4.damage + " ice damage!";
         }
-        if (fire = true)
+        if (fire)
         {
             enemyUnit.TakeDamage(playerUnit4.damage);
             enemyHUD.SetHP(enemyUnit.currentHP);
@@ -199,7 +212,7 @@ public class BattleSystem : MonoBehaviour
             playerUnit.bagdmg = Random.Range(1, 7);
             dialogueText.text = "Pandora opens her bag of goodies!";
             yield return new WaitForSeconds(2f);
-            bool IsDead = enemyUnit.BagDamage(playerUnit.damage);
+            bool IsDead = enemyUnit.BagDamage(playerUnit.bagdmg);
             enemyHUD.SetHP(enemyUnit.currentHP);
             if (playerUnit.bagdmg == 1)
             {
@@ -260,6 +273,7 @@ public class BattleSystem : MonoBehaviour
         playerHUD3.SetMP(playerUnit3.currentMP);
         if (HasMP)
         {
+            state = BattleState.PLAYERTURN4;
             enemyUnit.poison += 3;
             dialogueText.text = "Ingrid throws a toxic vial!";
             yield return new WaitForSeconds(2f);
@@ -283,15 +297,17 @@ public class BattleSystem : MonoBehaviour
             bool IsDead = enemyUnit.TakeDamage(playerUnit4.damage);
             enemyHUD.SetHP(enemyUnit.currentHP);
             dialogueText.text = playerUnit4.unitName + " swaps!";
-            if (ice == true)
+            if (ice)
             {
                 playerUnit4.unitName = "Solis";
                 fire = true;
+                ice = false;
             }
             else
             {
                 playerUnit4.unitName = "Boreas";
                 ice = true;
+                fire = false;
             }
             state = BattleState.ENEMYTURN;
             yield return new WaitForSeconds(2f);
