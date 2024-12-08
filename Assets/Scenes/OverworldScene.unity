@@ -2348,7 +2348,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!60 &1333909887
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -3835,6 +3835,18 @@ PrefabInstance:
     - target: {fileID: 5012770690825523609, guid: 4444ccd3ac0484b159a15eb4ee4cf882, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8729728684338720794, guid: 4444ccd3ac0484b159a15eb4ee4cf882, type: 3}
+      propertyPath: m_BodyType
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8729728684338720794, guid: 4444ccd3ac0484b159a15eb4ee4cf882, type: 3}
+      propertyPath: m_AngularDrag
+      value: 0.005
+      objectReference: {fileID: 0}
+    - target: {fileID: 8729728684338720794, guid: 4444ccd3ac0484b159a15eb4ee4cf882, type: 3}
+      propertyPath: m_Constraints
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
