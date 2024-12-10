@@ -8,6 +8,8 @@ TagManager:
   - Member
   - Plant
   - Slime
+  - Forest
+  - End
   layers:
   - Default
   - TransparentFX

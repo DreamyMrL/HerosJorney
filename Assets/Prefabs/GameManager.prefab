@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2610344836682573225}
   - component: {fileID: 369135317276417821}
+  - component: {fileID: 5405258675281681595}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -44,3 +45,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f807a5e99639e41bfbbdd3d400d44a54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &5405258675281681595
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4528370091478448195}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1d9ec043a37347048475040e80a9996, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PlayerName: Pandora

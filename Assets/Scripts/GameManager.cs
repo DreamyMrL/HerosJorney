@@ -11,14 +11,25 @@ public class GameManager : MonoBehaviour
     {
 
     }
-
-    public void LoadOverworldScene()
+    public void LoadStartScene()
     {
         SceneManager.LoadScene(0);
     }
-    public void LoadBattleScene()
+    public void LoadOverworldScene()
     {
         SceneManager.LoadScene(1);
+    }
+    public void LoadForestScene()
+    {
+        SceneManager.LoadScene(2);
+    }
+    public void LoadBattleScene()
+    {
+        SceneManager.LoadScene(3);
+    }
+    public void LoadEndScene()
+    {
+        SceneManager.LoadScene(4);
     }
 
     public static GameManager Instance { get; private set; }

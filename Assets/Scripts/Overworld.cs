@@ -15,6 +15,8 @@ public class Overworld : MonoBehaviour
     public UnityEvent EnemyTrigger;
     public UnityEvent EnemyisDead;
     public UnityEvent CharacterGet;
+    public UnityEvent ForestTrigger;
+    public UnityEvent EndTrigger;
 
     public GameObject player;
     public GameObject Popup;
@@ -65,6 +67,14 @@ public class Overworld : MonoBehaviour
             BattleSystem.slime = true;
             PlayerPosition = player.transform.position;
             EnemyTrigger.Invoke();
+        }
+        if (other.gameObject.tag == "Forest")
+        {
+            ForestTrigger.Invoke();
+        }
+        if (other.gameObject.tag == "End")
+        {
+            EndTrigger.Invoke();
         }
         if (other.gameObject.tag == "Plant")
         {
