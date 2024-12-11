@@ -85,7 +85,6 @@ public class BattleSystem : MonoBehaviour
         var currentSlot = playerSlots[currentPlayerIndex];
         dialogueText.text = $"What will {currentSlot.unit.unitName} do?";
         abilityText.text = currentSlot.abilityName;
-        SwapToButtons[currentPlayerIndex].Invoke();
     }
 
     IEnumerator PlayerAttack()
@@ -111,6 +110,7 @@ public class BattleSystem : MonoBehaviour
     IEnumerator PlayerAbility()
     {
         var currentSlot = playerSlots[currentPlayerIndex];
+        Debug.Log($"Current Player: {currentSlot.unit.unitName}, Ability: {currentSlot.abilityName}");
         bool hasMP = currentSlot.unit.UseMP(currentSlot.unit.amount);
         currentSlot.hud.SetMP(currentSlot.unit.currentMP);
 
@@ -187,6 +187,9 @@ public class BattleSystem : MonoBehaviour
 
     IEnumerator EnemyTurn()
     {
+        enemyUnit.TakeDamage(enemyUnit.poison);
+        enemyHUD.SetHP(enemyUnit.currentHP);
+
         dialogueText.text = $"{enemyUnit.unitName} attacks!";
         yield return new WaitForSeconds(1f);
 
