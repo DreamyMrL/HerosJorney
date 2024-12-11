@@ -1,11 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections.Generic;
+using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "NewDialogueState", menuName = "Dialogue/Dialogue State")]
-public class DialogueState : ScriptableObject
+[CreateAssetMenu(fileName = "NewStateData", menuName = "Dialogue System/State Data")]
+public class StateData : ScriptableObject
 {
-    public string stateName;  // Name or ID for the dialogue state
-    public Dialogue dialogue; // Reference to the Dialogue asset for this state
-}
+    private Dictionary<int, bool> conditions = new Dictionary<int, bool>();
 
+    public void SetCondition(int key, bool value)
+    {
+        conditions[key] = value;
+    }
+
+    public bool GetCondition(int key)
+    {
+        return conditions.ContainsKey(key) && conditions[key];
+    }
+}

@@ -4,19 +4,20 @@ using UnityEngine;
 
 public class ConditionSetter : MonoBehaviour
 {
-    [SerializeField]
-    private DialogueTrigger dialogueTrigger; // Reference to the DialogueTrigger
+    [SerializeField] private StateData stateData;
+    [SerializeField] private int conditionKey;
+    [SerializeField] private bool conditionValue;
 
-    public void SetCondition(int condition)
+    public void SetCondition()
     {
-        if (dialogueTrigger != null)
+        if (stateData != null)
         {
-            dialogueTrigger.SetCondition(condition);
+            stateData.SetCondition(conditionKey, conditionValue);
+            Debug.Log($"Condition {conditionKey} set to {conditionValue}.");
         }
         else
         {
-            Debug.LogError("DialogueTrigger reference is missing in ConditionSetter.");
+            Debug.LogError("StateData is not assigned.");
         }
     }
 }
-

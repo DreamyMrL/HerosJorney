@@ -662,10 +662,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 421031f05ad6c474aaa31f1b4441bdf8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  npcName: Ingrid
-  dialogueStates:
-  - {fileID: 11400000, guid: 6915170cb5a05b84dbf683b99c1db77d, type: 2}
-  - {fileID: 11400000, guid: f585c3fadd57fb64e87770e33bb28c68, type: 2}
+  dialogue: {fileID: 11400000, guid: 6915170cb5a05b84dbf683b99c1db77d, type: 2}
+  stateData: {fileID: 11400000, guid: 1930010e58db6764e9bd35806befe369, type: 2}
+  requiredConditionKey: -1
+  requiredConditionValue: 0
 --- !u!1 &188764591
 GameObject:
   m_ObjectHideFlags: 0
@@ -2313,8 +2313,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 421031f05ad6c474aaa31f1b4441bdf8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  npcName: fisherman
-  dialogueStates: []
+  dialogue: {fileID: 0}
+  stateData: {fileID: 0}
+  requiredConditionKey: -1
+  requiredConditionValue: 1
 --- !u!114 &1138895286 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4785144643973123598, guid: 6dc7b90d3e01d1c4595185dd82289980, type: 3}
@@ -3255,6 +3257,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8b3c88e1fca5fb4da832411d99ca5c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  stateData: {fileID: 0}
 --- !u!4 &1784395708
 Transform:
   m_ObjectHideFlags: 0
@@ -3940,6 +3943,14 @@ PrefabInstance:
     - target: {fileID: 5012770690825523609, guid: 4444ccd3ac0484b159a15eb4ee4cf882, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8729728684338720794, guid: 4444ccd3ac0484b159a15eb4ee4cf882, type: 3}
+      propertyPath: m_BodyType
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8729728684338720794, guid: 4444ccd3ac0484b159a15eb4ee4cf882, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
