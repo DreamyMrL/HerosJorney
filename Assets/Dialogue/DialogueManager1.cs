@@ -62,7 +62,7 @@ public class DialogueManager : MonoBehaviour
         }
 
         var line = dialogueLines.Dequeue();
-        speakerNameText.text = line.speaker;
+        speakerNameText.text = line.speakerName;
         dialogueText.text = "";
 
         if (isDisplayingText)
@@ -79,7 +79,7 @@ public class DialogueManager : MonoBehaviour
         else
         {
             HideButtons();
-            StartCoroutine(WaitAndDisplayNextLine(line.displayTime));
+            StartCoroutine(WaitAndDisplayNextLine());
         }
     }
 
@@ -96,9 +96,9 @@ public class DialogueManager : MonoBehaviour
         isDisplayingText = false;
     }
 
-    private IEnumerator WaitAndDisplayNextLine(float delay)
+    private IEnumerator WaitAndDisplayNextLine()
     {
-        yield return new WaitForSeconds(delay);
+        yield return new WaitForSeconds(2f); // Adjust duration as needed
         DisplayNextLine();
     }
 
