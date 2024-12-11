@@ -14,43 +14,53 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lines:
   - speaker: Ingrid
+    speakerName: Witch?
     text: Oops, I dropped something...
-    displayTime: 3
+    displayDuration: 4
     requiresPlayerInput: 0
   - speaker: Pandora
+    speakerName: Pandora
     text: "Wowie! Those potions are pretty nifty. \nWhat\u2019s your name?"
-    displayTime: 3
+    displayDuration: 10
     requiresPlayerInput: 0
   - speaker: Ingrid
+    speakerName: Witch?
     text: Who's asking?
-    displayTime: 3
+    displayDuration: 2
     requiresPlayerInput: 1
   - speaker: Pandora
+    speakerName: Pandora
     text: "I\u2019m Pandora, and I am trying to find people\n to save the town with
       me!"
-    displayTime: 3
+    displayDuration: 5
     requiresPlayerInput: 0
   - speaker: Pandora
+    speakerName: Pandora
     text: You seem like just the right type of person!
-    displayTime: 3
+    displayDuration: 5
     requiresPlayerInput: 0
   - speaker: Ingrid
+    speakerName: Witch?
     text: "I\u2019m Ingrid Valletine\u2026"
-    displayTime: 3
+    displayDuration: 3
     requiresPlayerInput: 0
   - speaker: Ingrid
+    speakerName: Ingrid
     text: "Hmm, saving the town, you say? \nI don\u2019t have many friends, but I
       can help out..."
-    displayTime: 3
+    displayDuration: 4
     requiresPlayerInput: 0
   - speaker: Ingrid
+    speakerName: Ingrid
     text: These slimes are a damn inconvenience!
-    displayTime: 3
+    displayDuration: 4
     requiresPlayerInput: 0
   - speaker: Pandora
+    speakerName: ???
     text: "Ingrid Valletine is a mysterious witch \nwho can poison enemies with her
       potions. \nWhen enemies are poisoned, they will take\n damage at the beginning
       of their turn."
-    displayTime: 3
+    displayDuration: 10
     requiresPlayerInput: 0
-  nextState: -1
+  continuePromptText: Recruit
+  endPromptText: Leave

@@ -10,5 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 08e83032bc9929a4e9a13e1143453586, type: 3}
-  m_Name: Ingrid-Recruitment
+  m_Name: IngridRecruit2
   m_EditorClassIdentifier: 
+  stateName: IngridRecruit2
+  dialogue: {fileID: 11400000, guid: f585c3fadd57fb64e87770e33bb28c68, type: 2}
