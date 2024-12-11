@@ -4,50 +4,22 @@ using UnityEngine;
 
 public class DialogueTrigger : MonoBehaviour
 {
-    [SerializeField] private string npcName; // NPC's name
-    [SerializeField] private Dialogue[] dialogueStates; // Array of dialogues for this NPC
-    private int currentStateIndex = 0; // Tracks the current dialogue state
+    [SerializeField] private Dialogue dialogue;
+    [SerializeField] private StateData stateData;
+    [SerializeField] private int requiredConditionKey = -1;
+    [SerializeField] private bool requiredConditionValue = true;
 
-    private void Update()
+    public void StartDialogue()
     {
-        if (Input.GetKeyDown(KeyCode.E)) // Interaction key
+        if (stateData != null && requiredConditionKey >= 0)
         {
-            TriggerDialogue();
-        }
-    }
-
-    public void TriggerDialogue()
-    {
-        if (DialogueManager.Instance == null)
-        {
-            Debug.LogError("DialogueManager instance not found.");
-            return;
+            if (stateData.GetCondition(requiredConditionKey) != requiredConditionValue)
+            {
+                Debug.Log("Condition not met. Dialogue cannot start.");
+                return;
+            }
         }
 
-        if (currentStateIndex < dialogueStates.Length)
-        {
-            Dialogue currentDialogue = dialogueStates[currentStateIndex];
-            DialogueManager.Instance.StartDialogue(currentDialogue);
-
-            // Move to the next state after the current dialogue
-            currentStateIndex++;
-        }
-        else
-        {
-            Debug.Log($"{npcName} has no more dialogue states.");
-        }
-    }
-
-    // Optional: Reset to a specific state
-    public void SetCondition(int stateIndex)
-    {
-        if (stateIndex >= 0 && stateIndex < dialogueStates.Length)
-        {
-            currentStateIndex = stateIndex;
-        }
-        else
-        {
-            Debug.LogWarning("Invalid state index.");
-        }
+        DialogueManager.Instance.StartDialogue(dialogue);
     }
 }
