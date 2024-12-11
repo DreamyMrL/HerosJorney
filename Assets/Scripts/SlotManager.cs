@@ -17,7 +17,7 @@ public class SlotManager : MonoBehaviour
     public static SlotManager Instance;
 
     [Header("Slot Settings")]
-    public int maxSlots = 4; // Maximum number of slots
+    public int maxSlots = 3; // Maximum number of slots
     public List<Transform> predefinedSlotPositions; // Slot positions in the scene
     public List<CharacterSlot> characterSlots = new List<CharacterSlot>(); // Active characters in slots
 

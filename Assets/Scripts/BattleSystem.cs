@@ -194,7 +194,7 @@ public class BattleSystem : MonoBehaviour
         var targetSlot = playerSlots[target];
         bool isDead = false;
 
-        if (target == 1 && evade)
+        if (evade == true)
         {
             dialogueText.text = $"{targetSlot.unit.unitName} evades the attack!";
             evade = false;
