@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2610344836682573225}
   - component: {fileID: 369135317276417821}
-  - component: {fileID: 5405258675281681595}
-  - component: {fileID: 6379490431038572268}
+  - component: {fileID: 4595439827438922660}
+  - component: {fileID: 8037666907497852619}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f807a5e99639e41bfbbdd3d400d44a54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &5405258675281681595
+--- !u!114 &4595439827438922660
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -58,8 +58,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1d9ec043a37347048475040e80a9996, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlayerName: Pandora
---- !u!114 &6379490431038572268
+  PlayerName: 
+--- !u!114 &8037666907497852619
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -72,14 +72,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxSlots: 3
-  predefinedSlotPositions:
-  - {fileID: 2741605070910974509, guid: 84c3a4efd253d46569a9e85d67a1cccc, type: 3}
-  - {fileID: 696964649707679125, guid: e00297564327540fb8a82711993b6340, type: 3}
-  - {fileID: 7621540617086111265, guid: 8279f7a1d32ed46388ef17e4a029723e, type: 3}
-  characterSlots:
-  - characterPrefab: {fileID: 6917410068860513647, guid: 84c3a4efd253d46569a9e85d67a1cccc, type: 3}
-    position: {fileID: 2741605070910974509, guid: 84c3a4efd253d46569a9e85d67a1cccc, type: 3}
-    hud: {fileID: 0}
-    attackName: Attack
-    abilityName: Goodie Bag
-    unit: {fileID: 5418704379489668645, guid: 84c3a4efd253d46569a9e85d67a1cccc, type: 3}
+  predefinedSlotPositions: []
+  characterSlots: []

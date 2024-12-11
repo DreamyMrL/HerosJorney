@@ -3557,17 +3557,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1846524236}
   m_CullTransparentMesh: 1
---- !u!114 &1961147112 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 369135317276417821, guid: 79ec378bd848a4ec2836d05009ff1325, type: 3}
-  m_PrefabInstance: {fileID: 4620624415023940758}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f807a5e99639e41bfbbdd3d400d44a54, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1991872558 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8003089215751471451, guid: 6dc7b90d3e01d1c4595185dd82289980, type: 3}
@@ -3757,63 +3746,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ea6dbf9d2cf1d4141ae02d6ce83a6a04, type: 3}
---- !u!1001 &4620624415023940758
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 2610344836682573225, guid: 79ec378bd848a4ec2836d05009ff1325, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 6.0855737
-      objectReference: {fileID: 0}
-    - target: {fileID: 2610344836682573225, guid: 79ec378bd848a4ec2836d05009ff1325, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -5.2560587
-      objectReference: {fileID: 0}
-    - target: {fileID: 2610344836682573225, guid: 79ec378bd848a4ec2836d05009ff1325, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -0.18307023
-      objectReference: {fileID: 0}
-    - target: {fileID: 2610344836682573225, guid: 79ec378bd848a4ec2836d05009ff1325, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2610344836682573225, guid: 79ec378bd848a4ec2836d05009ff1325, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2610344836682573225, guid: 79ec378bd848a4ec2836d05009ff1325, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2610344836682573225, guid: 79ec378bd848a4ec2836d05009ff1325, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2610344836682573225, guid: 79ec378bd848a4ec2836d05009ff1325, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2610344836682573225, guid: 79ec378bd848a4ec2836d05009ff1325, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2610344836682573225, guid: 79ec378bd848a4ec2836d05009ff1325, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4528370091478448195, guid: 79ec378bd848a4ec2836d05009ff1325, type: 3}
-      propertyPath: m_Name
-      value: GameManager
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 79ec378bd848a4ec2836d05009ff1325, type: 3}
 --- !u!4 &5070763598473197016 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5012770690825523609, guid: 4444ccd3ac0484b159a15eb4ee4cf882, type: 3}
@@ -3839,14 +3771,6 @@ PrefabInstance:
       propertyPath: CharacterGet.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1027411329}
-    - target: {fileID: 4300382210315280864, guid: 4444ccd3ac0484b159a15eb4ee4cf882, type: 3}
-      propertyPath: EnemyTrigger.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1961147112}
-    - target: {fileID: 4300382210315280864, guid: 4444ccd3ac0484b159a15eb4ee4cf882, type: 3}
-      propertyPath: ForestTrigger.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1961147112}
     - target: {fileID: 5012770690825523609, guid: 4444ccd3ac0484b159a15eb4ee4cf882, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.31
@@ -3898,7 +3822,6 @@ SceneRoots:
   m_Roots:
   - {fileID: 593845019}
   - {fileID: 172523058312177681}
-  - {fileID: 4620624415023940758}
   - {fileID: 602351352}
   - {fileID: 794693913}
   - {fileID: 1027411331}
